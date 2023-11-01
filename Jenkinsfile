@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
-        sh 'cat > jenkinstesttext.txt'
+        sh 'touch home/jenkinstesttext.txt'
       }
     }
 
