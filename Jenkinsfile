@@ -1,3 +1,4 @@
+def workspace = WORKSPACE
 pipeline {
   agent any
   stages {
@@ -6,13 +7,20 @@ pipeline {
         echo 'Building'
         script{
         
-      def workspace = WORKSPACE
       workspace = env.WORKSPACE
       echo "Current workspace is $WORKSPACE"
           sh "cat  > $WORKSPACE/workspacetest.txt"
           
         }
         }
+    }
+
+    stage('Rename'){
+      steps{
+        script{
+          echo "Current workspace is $WORKSPACE"
+        }
+      }
     }
 
     stage('Test') {
