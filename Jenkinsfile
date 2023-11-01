@@ -28,6 +28,7 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Testing'
+        echo 'this is a commit'
       }
     }
 
