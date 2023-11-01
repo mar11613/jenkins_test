@@ -19,6 +19,7 @@ pipeline {
       steps{
         script{
           echo "Current workspace is $WORKSPACE"
+          sh "mv  $WORKSPACE/workspacetest.txt  $WORKSPACE/newworkspace.txt" 
         }
       }
     }
