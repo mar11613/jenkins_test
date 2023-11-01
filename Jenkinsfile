@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
+        script{
         // now you are on slave labeled with 'label'
       def workspace = WORKSPACE
       // ${workspace} will now contain an absolute path to job workspace on slave
@@ -16,6 +17,7 @@ pipeline {
   
       // the current Jenkins instances will support the short syntax, too:
       echo "Current workspace is $WORKSPACE"
+        }
         }
     }
 
