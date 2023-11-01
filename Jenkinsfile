@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
-        cat > jenkinsTest.txt
+        sh 'cat > jenkinstesttext.txt'
       }
     }
 
